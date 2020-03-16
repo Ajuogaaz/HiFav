@@ -1,7 +1,8 @@
 # HiFav
 
-## About
-This is a chat app by [**Linus Brian Okoth**](https://www.linkedin.com/in/linus-okoth-273b12143/)
+HiFav is a Social Chat Android app built to connect you to everyone you love.
+
+## By [**Linus Brian Okoth**](https://www.linkedin.com/in/linus-okoth-273b12143/)
 
 For any bugs or messages drop me an [email](brianlinus1753@gmail.com)
 
@@ -69,3 +70,7 @@ checkboxes that request to set default functionalities for your fragments.
 
 ***Graddle Crash*** or ***Project cant access*** ```depreciated support:appcompativity.design``` add this line to your graddle
 to use the updated version of the library ```implementation 'com.google.android.material:material:1.1.0'```
+
+### _Demonstration of above implementations_
+
+<img src="gameplay.gif" width=1000><br>
