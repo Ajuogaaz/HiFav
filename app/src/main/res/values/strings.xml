@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HiFav</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contacts_fragment">Contacts Fragment</string>
+    <string name="group_fragment">Group Fragment</string>
+    <string name="chats_fragment">Chats Fragment</string>
 </resources>
