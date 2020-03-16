@@ -73,4 +73,4 @@ to use the updated version of the library ```implementation 'com.google.android.
 
 ### _Demonstration of above implementations_
 
-<img src="gameplay.gif" width=1000><br>
+<img src="HiFav.gif" width=200><br>
