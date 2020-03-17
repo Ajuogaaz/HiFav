@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         PhoneLoginButton = findViewById(R.id.phone_login_button);
         UserEmail = findViewById(R.id.login_email);
         UserPassword = findViewById(R.id.login_password);
-        NeednNewAcoountLink = findViewById(R.id.register_button);
+        NeednNewAcoountLink = findViewById(R.id.sign_in);
         ForgetPasswordLink = findViewById(R.id.forget_password_link);
 
     }
