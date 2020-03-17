@@ -75,6 +75,55 @@ to use the updated version of the library ```implementation 'com.google.android.
 
 <img src="HiFav.gif" width=200><br>
 
+
+## Setting Up Authentication page
+
+### Implementation Specifics
+
+- Include ***firebase User*** tag in the ```Main_Activity``` then use the ```getinstance``` method to get an instance of your database
+in its current state.
+- Create asn ```OnStart``` method that checks if the current user is present is present in the database, else use the ***Intents*** to
+forward them to to the ```Login_Activity```.
+- Create ***drawables*** to style your ```Login_Activity``` and ```Register_Activity```. Style each corresponding ```.xml``` files and
+then use ***intents*** and ***```setOnClickListeners```*** to switch between the different pages.
+
+### _Common Bugs_
+- ***Build Crash when Switching through Different Activities*** This may be caused by a misplaced id because at this stage you are 
+required to create different elements and subsequently many ids that can easily get switched while passing an intent or cause an unpredicatable look in your UI.
+
+## Adding Authentication Data and creating users in Firebase
+
+### Implementation Specifics
+
+- The input is collected from the ```Register_Activity.java``` and you should filter through to avoid missapropriation of your data by corrupted data. Thus set booelean checks for password length and set the user field to email to verify email. 
+- Create a ***FirebaseAuth*** using the ***FirebaseAuth.getInstance*** to save the current state of your application database. 
+- Add Data to ***Firebase*** using ```mAuth.createUserWithEmailAndPassword(email, password)``` with an optianal ```.addOnCompleteListener``` to check if the process was succesfull or to get exceptions that you can catch to retry adding the user in a more suitable way or display to the user using the ***Toast***.
+- For a finer finishing, add the ***ProgressDisplay*** and make animations that connects the microseconds when the data is being 
+sent to the ***Firebase*** servers.  Finally add intents to send back users to ```loginActivity``` after the process is completed.
+
+### _Common Bugs_
+***Failed to Authenticate the User Data*** This is specifically caused by Firebase being unable to receive user input due to restictions by the administrator. Login into your Online Firebase Account enable ***EmailandPasswordAuthentication*** while not enabling the email link authentication.
+
+***Error Message*** ***```Emulator Trying to Erase a non-existent Color Buffer with Handle 0```*** This is has an unbounded range of possible causes, But your first step is check your ***logcat*** for any erroundous error message and the second most common solution is 
+Increasing the RAM your emulator runs on. The exact implementation can be found [here](https://stackoverflow.com/questions/47739661/android-studio-emulator-and-process-finished-with-exit-code-0)
+
+## Reading Authentication Data after creatin users in Firebase
+
+### Implementation Specifics
+- Start by creatingan instance of the ***Firebase-Auth*** in the ```Login_Activity```
+- Set Onclick listeners for submit then verify the data in the following manner ```mAuth.signInWithEmailAndPassword(email, password)```.
+- Just as the previous case, add ***Toasts*** and ***ProgressDisplays*** while running your database to communicate with your use on what the app is doing on any particular time. You could use the optional ```.addOnCompleteListener``` for more comprehensive feedbacks.
+- Most Importantly add the ```FirebaseAuth.getCurrentUser``` in both the ```Main_Activity``` and ```Login_Activity``` to ensure that once the user logs in during app installation they are never prompted to login againby checking if the ```currentuser``` matches the ```FirebaseAuth.getCurrentUser``` and thus they are not redirected from ```Main_Activity``` to ```Login_Activity``` as the landing page.
+
+### _Common Bugs_
+
+***User Doesnt exist in database*** Confirm that you are not using any depreciated Firebase libraries to access your data. Otherwise add the following to your app graddle environment ****```implementation 'com.google.firebase:firebase-auth:19.3.0'``` and 
+ ```implementation 'com.google.android.gms:play-services-auth:17.0.0'```****. Then use the following to parse your details ```mAuth.signInWithEmailAndPassword(email, password)```.
+  
+ ### _Demonstration of above implementations_
+
+<img src="HiFav2.gif" width=200><br>
+
 ## License
 
     Copyright (c) 2020 Linus Brian Okoth
