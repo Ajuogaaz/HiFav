@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
+        //currentUser = mAuth.getCurrentUser();
         InnitializeFields();
 
         NeednNewAcoountLink.setOnClickListener(new View.OnClickListener() {
@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    protected void onStart()
+  /*  protected void onStart()
     {
         super.onStart();
 
@@ -122,12 +122,15 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
-
-    private void sendUserToMainActivity()
-    {
-        Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(mainIntent);
-    }
+*/
+  private void sendUserToMainActivity()
+  {
+      Intent MainIntent = new Intent(LoginActivity.this,
+              MainActivity.class);
+      MainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+      startActivity(MainIntent);
+      finish();
+  }
     private void sendUserToRegisterActivity()
     {
         Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);

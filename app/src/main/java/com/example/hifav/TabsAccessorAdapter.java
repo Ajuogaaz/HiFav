@@ -44,9 +44,9 @@ public class TabsAccessorAdapter extends FragmentPagerAdapter {
         switch(position)
         {
             case 0:
-                return "Charts";
+                return "Chats";
             case 1:
-                return "Group";
+                return "Groups";
             case 2:
                 return "Contacts";
 
