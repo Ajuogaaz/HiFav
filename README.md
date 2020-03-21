@@ -124,6 +124,30 @@ Increasing the RAM your emulator runs on. The exact implementation can be found 
 
 <img src="HiFav2.gif" width=200><br>
 
+## Distinguishing users and Managing user data.
+
+## 1. Adding drop down Menu to handle Logout in UI.
+
+### Implementation Specifics
+ -  We create a new ***Android Resource Directory*** with specific type of Menu and style the ```mainActivity.xml``` ensuring the ```showAsAction``` on the menu is set to never
+ -  In the ```MainActivity.java``` add a method ```onCreateOptionsMenu``` to find out if any of the options in the Menu has been clicked.Inside the check conditional statement for Logout, use the firebase instance ***mAuth*** to signout the user and use the previously defined method ***sendUsertoLoginActivity***.
+ 
+## 2. Handling Creation of different users
+
+### Implementation Specifics
+- Go to ***android manifest*** and add user permission to request use of the internet.
+- Add in the ```registerActivity.java``` and the ```loginActivity.java``` the attribute ***MainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)*** in their ```sendUserToMainActivity``` methods
+and finally ```finish()```. This is to prevent the user from pressing the back button and being redirected to either ```loginActivity``` or ```RegisterActivity``` after they complete these actions.
+- Using the ***DatabaseReferrence*** We are going to add unique user id to the database for each user that logs in. Go to the ```Firebase ```  and click on the database section and create a real time database in the test mode to allow reading and writting by the users.
+- Using the instance of the ***DatabaseReferrence*** in  ```registerActivity.java``` we can create unique users everytime we get a new signup by: ```RootRef.child("Users").child(currentUserID).setValue(" ")```
+
+### _Common Bugs_
+***Error reading or configuring your firebase database*** This can be solved by deleting all the existing users. Then remove the previously wirtten code in ```LoginActivity``` and ```RegisterActivity``` such that the ```onStart``` methods in these files dont check if the current user is logged in. We will do that only in ```MainActivity.java``` since thats the landing page and ideally we wont render the ```LoginActivity``` and ```RegisterActivity``` unless the user logouts.
+
+ ### _Demonstration of above implementations_
+
+<img src="HiFav3.gif" width=200><br>
+
 ## License
 
     Copyright (c) 2020 Linus Brian Okoth
