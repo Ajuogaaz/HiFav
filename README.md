@@ -7,8 +7,8 @@ HiFav is a Social Chat Android app built to connect you to everyone you love.
 For any bugs or messages drop me an [email](brianlinus1753@gmail.com)
 
 ## Methodology
-I will display any progress in a the chronological order in which they are implemented and I will also give a brief explanation on
-whatever the features I am implementing are.
+I will display any progress in the chronological order in which they were implemented and I will also give a brief explanation on
+whatever the features I am implementing.
 
 ## Requirements:
 - Download and Install ***AndroidStudio 3.5*** or later versions.
@@ -18,27 +18,27 @@ whatever the features I am implementing are.
 ## Configuration
 The app will be running on data as different users will be sending messages to other users. Thus I chose a database that can easily
 facilitate this process as follows: 
--  I added Firebase Acess Control through the built ***assistant*** in Android studio. First you have to lig into android studio
-then using the assistant bar add access and Authentification by Firebase.
+-  I added Firebase Access Control through the built in ***assistant*** in Android studio. First you have to log into android studio
+then using the assistant bar add access and Authentication by Firebase.
 - Click on add Google cloud storage to the app. 
 
 ### _Common Bugs_ 
 ***Firebase connection failed*** - This is caused either caused by poor internet connection which can be solved by accessing a stronger 
-internet connection or, if the account signed into your Android Studio account is not a gmail account. In that case you need to update
+internet connection or, if the account signed into your Android Studio account is not a gmail account. In that case you need to switch
 to a gmail account. 
 
 ***Build Graddle Failed*** - This is mostly as a result of difference in your graddle app version and the just added Firebase version
-which can also be solved by opening graddle app file and copying updating your dependency to the required version.
+which can also be solved by opening graddle app file and updating your dependency to the required version.
 
 ## Functionality and Major Features
 
 ## Custom TaskBar
 
 ### Implementation Specifics
--  Open your style and create a customized style of choice. Then create a new layout with the ```root element``` as the toolbar.
-- In this progect we will be automatically choosing ***Relative Layout**
+-  Open your style folder and create a customized style of choice. Then create a new layout with the ```root element``` as the toolbar.
+- In this project we will be automatically choosing ***Relative Layout**
 -  Set the properties in your new layout including adding the background color and setting the layout height to wrap content.
-- It advisable thgat throughout this project you give every new element added an inituitive id that matches what it performs or
+- It advisable that throughout this project you give every new element added an inituitive id that matches what it performs or
 the functions of the library it implements.
 - Include your layout in ```activity_main.xml``` since thats the main xml page being rendered when oncreate in the
 ```MainActivity.java``` is invoked when your app runs. It defines the landing page in other words. You will need to
