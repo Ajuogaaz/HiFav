@@ -32,4 +32,5 @@
     <string name="available">Available</string>
     <string name="update">update</string>
     <string name="welcome2">Welcome</string>
+    <string name="retrieveuser">Please set and update profile information</string>
 </resources>
