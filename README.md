@@ -148,6 +148,25 @@ and finally ```finish()```. This is to prevent the user from pressing the back b
 
 <img src="HiFav3.gif" width=200><br>
 
+
+## Updating Name and status just after Account Creation
+
+- Create a new ```SettingsActivity```. Import the ***CircleImageView*** from [here](https://github.com/hdodenhof/CircleImageView) by copying the following dependecies line ```implementation 'de.hdodenhof:circleimageview:3.1.0'``` and adding it to your graddle app.
+- Style your ```Activity_settings.xml``` in accordanve to this [documentation](https://github.com/hdodenhof/CircleImageView).
+- Create a method ***VerifyIfUserExist*** in the ```MainActivity``` that is called ```onStart``` to determine if this is a new or old user. If its a new user send them to the ```SettingsActivity``` so they can add the ***mandatory*** names and status and ***optional*** profilePicture. 
+- Create a String ```Hashmap``` and store the user input details into your database through the ```FirebaseDatabase().getInstance().getReference``` object.
+
+### _Common Bugs_
+***Civ-border-colour not responsive*** Change the border coloring from a ```primarycolor``` component to a ```colorprimary``` component.
+***Problems loading the Circle Image View*** View this list of [FAQs](https://github.com/hdodenhof/CircleImageView) for a possible solutions.
+***Error identifying or adding user in the database*** Ensure you check for consistency in variable ```name``` used to identify the user in the databse. Also check if the variable naming is consistentb in the HashMap.
+***The SettingsActivity does not load the MainActivity after the user details are input*** Set the subchild intermediarry while accessing the database using the ```FirebaseDatabase().getInstance().getReference``` object while verifying the user Existence.
+
+ ### _Demonstration of above implementations_
+ 
+<img src="HiFav4.gif" width=200><br>
+
+
 ## License
 
     Copyright (c) 2020 Linus Brian Okoth
