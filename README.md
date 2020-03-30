@@ -166,6 +166,20 @@ and finally ```finish()```. This is to prevent the user from pressing the back b
  
 <img src="HiFav4.gif" width=200><br>
 
+## Handling Groups
+- Retrieve the previous username and status by reading through the databse by a ```rootref``` instance of ```firebasedatabasereferrence```
+- Create a ```requestNewGroup``` Method and use a builder to create an alert when the user prompts the creation of the new group.
+- Read data from the database child ```group``` section and and Display them to the groupFragment with a ``styleList```.
+- Create an ```OnItemclickListener``` for each group in the array to transfer the name to the ```newGroupChatActivity``` using the intent.
+
+### _Common Bugs_ 
+***List of Group is duplicated every time you add a new group*** Create a ```hashset```. Using an ```iterator``` get the ```primarykeys``` which is the group name and add them to the hashset. Finally display the items in the ```hashset``` in the scrollable 
+layout with nested list.
+
+ ### _Demonstration of above implementations_
+
+<img src="HiFav5.gif" width=200><br>
+
 
 ## License
 
