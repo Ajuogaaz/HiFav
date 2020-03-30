@@ -36,4 +36,8 @@
     <string name="create_group">Create Group</string>
     <string name="write_message">Write Message</string>
     <string name="enterMessage">Please write message first...</string>
+    <string name="write_phone_">Write phone number here</string>
+    <string name="verification_input">Write verification code here</string>
+    <string name="send_verification_code">Send verification code</string>
+    <string name="verify">verify</string>
 </resources>
