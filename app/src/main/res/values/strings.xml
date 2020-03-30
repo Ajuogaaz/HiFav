@@ -34,4 +34,5 @@
     <string name="welcome2">Welcome</string>
     <string name="retrieveuser">Please set and update profile information</string>
     <string name="create_group">Create Group</string>
+    <string name="write_message">Write Message</string>
 </resources>

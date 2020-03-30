@@ -8,6 +8,7 @@
         <item name="colorAccent">#E6E6E6</item>
     </style>
 
+
     <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog">
 
     </style>
