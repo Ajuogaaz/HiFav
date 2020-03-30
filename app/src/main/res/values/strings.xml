@@ -35,4 +35,5 @@
     <string name="retrieveuser">Please set and update profile information</string>
     <string name="create_group">Create Group</string>
     <string name="write_message">Write Message</string>
+    <string name="enterMessage">Please write message first...</string>
 </resources>
