@@ -30,7 +30,7 @@
                 android:id="@+id/group_chat_text_display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="60dp"
                 android:layout_marginStart="2dp"
                 android:padding="10dp"
                 android:textAllCaps="false"
