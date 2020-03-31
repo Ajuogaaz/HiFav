@@ -40,4 +40,8 @@
     <string name="verification_input">Write verification code here</string>
     <string name="send_verification_code">Send verification code</string>
     <string name="verify">verify</string>
+    <string name="country_code">Please enter the correct phone Number with country code</string>
+    <string name="code_sent">The code has been sent to your phone</string>
+    <string name="empty_verify_code">Please enter Verification code</string>
+    <string name="logged_in">Congratulations! You are logged in succesfully</string>
 </resources>
