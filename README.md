@@ -4,7 +4,7 @@ HiFav is a Social Chat Android app built to connect you to everyone you love.
 
 ## By [**Linus Brian Okoth**](https://www.linkedin.com/in/linus-okoth-273b12143/)
 
-For any bugs or messages drop me an [email](brianlinus1753@gmail.com)
+For any bugs or messages drop me an [email](<mailto:brianlinus1753@gmail.com>)
 
 ## Methodology
 I will display any progress in the chronological order in which they were implemented and I will also give a brief explanation on
